@@ -6,23 +6,6 @@
 </head>
 
 <body>
-
-
-
-  <!-- <div class="navbar navbar-dark bg-dark sticky-top ">
-    <a href="{% url 'homepage' %}"> Home</a>
-    <a href="{% url 'user_profile' username=user %}" class="nav-link">My Profile</a>
-
-    <a href="{% url 'add_profile' %}" class="nav-link">Add Profile</a>
-    <a href="/logout" class="nav-link">Log Out</a>
-
-    <form class="form-inline" role="search" action="{% url 'search_results' %}">
-      <input class="form-control\" type="search" placeholder="Search businesses . . ." aria-label="Search"
-        name="business">
-      <button class="btn btn-outline-" type="submit">Search</button>
-    </form>
-  </div> -->
-
   <nav class="navbar navbar-expand-lg navbar-dark primary-color">
     <!-- Navbar brand -->
     <a class="navbar-brand" href="{% url 'homepage' %}">Neigh_Watch</a>
@@ -47,20 +30,20 @@
         <li class="nav-item">
           <a class="nav-link" href="/logout">Log Out</a>
         </li>
-        <!-- Links -->
-        <form class="form-inline" role="search" action="{% url 'search_results' %}" style="float: right;">
-          <div class="md-form my-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search businesses . . ." aria-label="Search" name="business">
-          </div>
-        </form>
-        {% else %}
-        <li class="nav-item">
-          <a class="nav-link" href="/accounts/login/">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/accounts/register">Sign Up</a>
-        </li>
-        {% endif %}
+      <!-- Links -->
+      <form class="form-inline">
+        <div class="md-form my-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        </div>
+      </form>
+      {% else %}
+      <li class="nav-item">
+        <a class="nav-link" href="/accounts/login/">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/accounts/register">Sign Up</a>
+      </li>
+      {% endif %}
     </div>
     <!-- Collapsible content -->
   </nav>
